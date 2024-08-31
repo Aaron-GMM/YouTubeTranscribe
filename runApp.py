@@ -1,16 +1,6 @@
-from flask import Flask, request,render_template
-from pytube import YouTube
-import speech_recognition as sr
-import  os
+from app import create_app
 
-
-app = Flask(__name__)
-
-
-
-def print_hi(name):
-    print(f'Hi, {name}')
+app = create_app()
 
 if __name__ == '__main__':
-    print_hi('PyCharm')
-
+    app.run(debug=True)
